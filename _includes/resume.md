@@ -1,40 +1,52 @@
 ## Casey Fitzpatrick ##
-cfitzpatrick42@gmail.com  
+[cfitzpatrick42@gmail.com](mailto:cfitzpatrick42@gmail.com)  
 Madison, PA  
 [kcghost.github.io](http://kcghost.github.io/)
 
 ### Relevant Work Experience ###
-Embedded Systems Software Engineer July 2012 - Present  
+Embedded Systems Software Engineer  
+July 2012 - Present  
 Software Design Solutions  
 Developed applications for both embedded and desktop platforms.  
 
-+ A GPS-enabled route following device
-    - GPS parsing, route following
-    - Interfacing with buttons, LEDs on device
-    - Web based configuration interface
-    - Built prototype hardware
-+ Industrial Automation testing system
-    - ADC and GPIO interfacing
-    - Pressure readouts
-    - Testing parts for defects
-    - Web based interface
-    - Dedicated kiosk for web interface
-+ Browser built for Web Applications (SDS WebAppetizer)
-    - Locked down browser with extended functionality
-    - Reconfigurable, Save and Load files, Splash Screen
-    - Fixed bugs in GTK+, WebkitGTK+ open source projects
-+ Integration of a Matlab application with a .NET application
-+ Windows Device driver building and signing
-+ Frontend for a phoneline testing utility
-+ DSP flashing utility (SDS FlashBurn 4)
-    - Supported new hex file formats
-    - Integration with Code Composer Studio
-    - Ported code to support new DSPs
-+ .NET Application development
++ Web Application Development
+    - Use of jQuery, Bootstrap, NodeJS, Python, SQLite, CGI
+    - Configuration console for audio DSPs
+    - Industrial automation testing system interface
+    - Virtualized hardware interface and backend protocol
+    - Machine interface with real-time information display and database configuration
+    - Embedded system configuration with real-time status display
++ Embedded Application Development
+    - Use of ADC, GPIO, GPS, SPI, ZigBee
+    - Industrial automation testing system
+    - GPS-enabled route following device
+    - DSP Flash program ports (SDS Flashburn 4)
+    - Improvements to xig (Xbee Internet Gateway) for support of a thermostat
+    - Linux Kiosk system
++ Software Application Development
+    - Use of C#, Matlab compiler, Java, C, C++
     - Maintenance and improvements on Visual IDE for audio DSPs
-    - Maintenance and improvements on Configuration Console for audio DSPs
+    - Maintenance and improvements on Configuration console for audio DSPs
+    - Maintenance and improvements on DSP flashing utility (SDS FlashBurn 4)
     - Audio DSP instruction set simulator/debugger
+    - Matlab integration into existing .NET application
+    - USB DSP board interface library
+    - Browser built for Web Applications (SDS WebAppetizer)
+    - Test suite for legacy industrial system software
++ Graphical User Interface Development
+    - Use of Embarcadero VCL, GTK+, Eclipse SWT, WinForms
+    - Phoneline testing utility front end
+    - Browser and configuration utility (SDS WebAppetizer)
+    - Maintenance and improvements on DSP flashing utility (SDS FlashBurn 4)
     - Automated FTP Batch uploader application
++ Windows device driver building and signing
+
+### Contributions ###
++ [CAH Card Generator](https://github.com/kcghost/CAH-Builder)
++ [Hex tile holder model](http://www.thingiverse.com/thing:139005)
++ [Ansible bug fixes](https://github.com/ansible/ansible/commits/devel?author=kcghost)
++ [GTK+ bug fix](https://bugzilla.gnome.org/show_bug.cgi?id=679019)
++ [WebKitGTK+ bug fix](https://bugs.webkit.org/show_bug.cgi?id=124226)
 
 ### Skills ###
 + Programming Languages
@@ -43,15 +55,18 @@ Developed applications for both embedded and desktop platforms.
     - C++
     - C#
     - Java
-+ Markup Languages
-    - HTML
 + Scripting Languages
     - Python
-    - PHP
     - Javascript
+    - PHP
+    - AWK
     - Bash
     - Batch
     - Matlab
+    - Makefile
++ Markup Languages
+    - HTML
+    - CSS
 + OpenSCAD 3D Modeling Language
 + Platforms
     - Embedded Linux
@@ -60,22 +75,22 @@ Developed applications for both embedded and desktop platforms.
     - Arduino
     - PIC Microcontroller
     - DSP
-+ Electrical Engineering
-+ Soldering
-+ Version Control Systems
-    - SVN
-    - BZR
 + GUI Toolkits
     - GTK+
     - WinForms
     - Eclipse SWT
     - Embarcadero VCL
++ Version Control Systems
+    - SVN
+    - GIT
++ Electrical Engineering
++ Soldering
 + 3D Printing
 
 ### Education ###
 Bachelor of Science in Computer Science  
 East Stroudsburg University, Pennsylvania  
-Major: Computer Science, Computer Security  
+Majors: Computer Science, Computer Security  
 Minor: Mathematics  
 GPA: 3.8  
 Graduated May 2012
