@@ -3,5 +3,6 @@ title: Resume
 layout: article
 description: Casey Fitzpatrick's resume
 ---
-{% markdown resume.md %}
+{{% capture md_resume %}{% include resume.md %}{% endcapture %}
+{{ md_resume | markdownify }}}
 
