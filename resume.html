@@ -3,6 +3,12 @@ title: Resume
 layout: article
 description: Casey Fitzpatrick's resume
 ---
-{% capture md_resume %}{% include resume.md %}{% endcapture %}
-{{ md_resume | markdownify }}
-
+<div class="dontprint" style="margin-bottom: 20px;">
+	<a class="btn btn-default btn-md" href="" onclick="window.print()">
+		<span class="glyphicon glyphicon-print"></span> Print Page
+	</a>
+	<a class="btn btn-default btn-md" href="/resume.txt" download>
+		<span class="glyphicon glyphicon-download"></span> Download File
+	</a>
+</div>
+{% capture md_resume %}{% include resume.md %}{% endcapture %}{{ md_resume | markdownify }}
