@@ -8,6 +8,21 @@ img {
 	border: solid 1px black;
 }
 
+a[href^="type="] {
+	pointer-events: none;
+	cursor: default;
+	text-align: center;
+	color: inherit;
+
+}
+
+a[href="type=caption"] {
+	display: block;
+	text-align: center;
+	margin-top: -15px;
+	font-style: italic;
+}
+
 .article h1,h2,h3,h4,h5,h6:first-of-type {
 	margin-top: 0px;
 }
