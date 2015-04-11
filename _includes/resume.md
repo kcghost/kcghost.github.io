@@ -17,7 +17,8 @@ Developed applications for both embedded and desktop platforms.
     - Machine interface with real-time information display and database configuration
     - Embedded system configuration with real-time status display
 + Embedded Application Development
-    - Use of ADC, GPIO, GPS, SPI, ZigBee
+    - Use of ADC, GPIO, GPS, SPI, SQLite, ZigBee
+    - Medical device
     - Industrial automation testing system
     - GPS-enabled route following device
     - DSP Flash program ports (SDS Flashburn 4)
