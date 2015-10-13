@@ -1,6 +1,6 @@
 ## Casey Fitzpatrick ##
 [cfitzpatrick42@gmail.com](mailto:cfitzpatrick42@gmail.com)  
-Madison, PA - Moving to the Lehigh Valley area soon  
+Hellertown, PA
 [kcghost.github.io](http://kcghost.github.io/)
 
 ### Relevant Work Experience ###
