@@ -4,7 +4,7 @@ layout: article
 category: projects
 description: 3D printed hexagonal tile holders for Catan
 ---
-##Catan Hex Tile Holders##  
+## Catan Hex Tile Holders ##  
 This project was my first foray into functional 3D modeling. I used [OpenSCAD](http://www.openscad.org/) to create several iterations of the model and a [Printrbot](http://printrbot.com/) 3D printer to prototype each iteration. I uploaded the model to [Thingiverse](http://www.thingiverse.com/thing:139005), where the model is available for download.
 
 For those not familiar, [Catan](http://www.catan.com/) is a board game that consists of several hexagonal cardboard tiles that are randomly arranged for each play. The tiles are held in place by a cardboard frame, which does not work well in practice. The board is difficult to assemble; tiles will often bump up at the edges, and once the board is assembled, it is very difficult to move the board without having the pieces shift all over the place. There are two primary solutions to the problem: One, purchase a large, expensive board like those offered by [Catan Boards](http://mycatanboards.com/); Two, use modular tile holders like [Hexels](http://www.thehexels.com/).
