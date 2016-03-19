@@ -27,6 +27,19 @@ a[href="type=caption"] {
 	margin-top: 0px;
 }
 
+table {
+	margin: 15px;
+}
+
+table, th, td {
+	border: 1px dashed black;
+}
+
+th, td {
+	padding: 5px;
+	text-align: left;
+}
+
 @media screen {
 	html {
 		overflow-y: scroll;
@@ -80,9 +93,9 @@ a[href="type=caption"] {
 }
 
 @media (max-width: 767px) {
-    .article {
-    	width: 100%;
-    }
+	.article {
+		width: 100%;
+	}
 }
 
 @media print {
