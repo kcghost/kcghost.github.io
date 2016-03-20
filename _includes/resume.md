@@ -4,8 +4,13 @@ Hellertown, PA
 [kcghost.github.io](http://kcghost.github.io/)
 
 ### Relevant Work Experience ###
+Linux Engineer  
+July 2015 - Present  
+TimeSys Corporation  
+Kernel and application development for embedded platforms  
+
 Embedded Systems Software Engineer  
-July 2012 - Present  
+July 2012 - June 2015  
 Software Design Solutions  
 Developed applications for both embedded and desktop platforms.  
 
