@@ -1,5 +1,5 @@
 ## Casey Fitzpatrick ##
-[cfitzpatrick42@gmail.com](mailto:cfitzpatrick42@gmail.com)  
+[kcghost@gmail.com](mailto:kcghost@gmail.com)  
 United States  
 [kcghost.github.io](http://kcghost.github.io/)
 
