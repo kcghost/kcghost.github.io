@@ -1,6 +1,6 @@
 ## Casey Fitzpatrick ##
 [kcghost@gmail.com](mailto:kcghost@gmail.com)  
-[kcghost.github.io](http://kcghost.github.io/)
+[kcghost.github.io](http://kcghost.github.io/)  
 Eastern Time Zone, United States  
 
 ### Work Experience ###
