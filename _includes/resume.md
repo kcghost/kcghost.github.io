@@ -1,9 +1,9 @@
 ## Casey Fitzpatrick ##
 [kcghost@gmail.com](mailto:kcghost@gmail.com)  
-United States  
 [kcghost.github.io](http://kcghost.github.io/)
+Eastern Time Zone, United States  
 
-### Relevant Work Experience ###
+### Work Experience ###
 BSP Maintenance Lead  
 Novemeber 2019 - April 2021  
 Timesys Corporation  
@@ -48,44 +48,27 @@ Software Design Solutions
 Developed applications for both embedded and desktop platforms  
 
 + Web Application Development
-    - Use of jQuery, Bootstrap, NodeJS, Python, SQLite, CGI
-    - Configuration console for audio DSPs
-    - Industrial automation testing system interface
-    - Virtualized hardware interface and backend protocol
-    - Machine interface with real-time information display and database configuration
-    - Embedded system configuration with real-time status display
+    - Developed web application front and back ends for a variety of embedded systems
+    - Developed a customizable desktyop browser software built for embedded or kiosk applications
 + Embedded Application Development
-    - Use of ADC, GPIO, GPS, SPI, SQLite, ZigBee
-    - Medical device
-    - Industrial automation testing system
-    - GPS-enabled route following device
-    - DSP Flash program ports (SDS Flashburn 4)
-    - Improvements to xig (Xbee Internet Gateway) for support of a thermostat
-    - Linux Kiosk system
+    - Developed embedded applications for industrial systems, audio DSPs, kiosks, GPS and thermostat devices
+    - Worked within an on-site team developing an Embedded Linux Medical device
+    - Contributed to xig (Xbee Internet Gateway) for support of a thermostat
 + Software Application Development
-    - Use of C#, Matlab compiler, Java, C, C++
-    - Maintenance and improvements on Visual IDE for audio DSPs
-    - Maintenance and improvements on Configuration console for audio DSPs
-    - Maintenance and improvements on DSP flashing utility (SDS FlashBurn 4)
-    - Audio DSP instruction set simulator/debugger
-    - Matlab integration into existing .NET application
-    - USB DSP board interface library
-    - Browser built for Web Applications (SDS WebAppetizer)
+    - Maintenance and improvements on Visual IDE, Configuration console, and flashing utility for audio DSPs
+    - Variety of GUI applications providing front ends and integration to legacy software
     - Test suite for legacy industrial system software
-+ Graphical User Interface Development
-    - Use of Embarcadero VCL, GTK+, Eclipse SWT, WinForms
-    - Phoneline testing utility front end
-    - Browser and configuration utility (SDS WebAppetizer)
-    - Maintenance and improvements on DSP flashing utility (SDS FlashBurn 4)
-    - Automated FTP Batch uploader application
+    - Audio DSP instruction set simulator/debugger
 + Windows device driver building and signing
 
 ### Contributions ###
-+ [CAH Card Generator](https://github.com/kcghost/CAH-Builder)
-+ [Hex tile holder model](http://www.thingiverse.com/thing:139005)
++ [Linux CAN driver](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/tree/drivers/net/can/spi/hi311x.c#n1034)
 + [Ansible bug fixes](https://github.com/ansible/ansible/commits/devel?author=kcghost)
 + [GTK+ bug fix](https://bugzilla.gnome.org/show_bug.cgi?id=679019)
 + [WebKitGTK+ bug fix](https://bugs.webkit.org/show_bug.cgi?id=124226)
++ [BetterJoy bug fix and improvement](https://github.com/Davidobot/BetterJoy/commit/8d5fd675bd3199b6dfa2ad2aae2ef71c6319cce3)
++ [Several small projects](https://github.com/kcghost?tab=repositories)
++ [Hex tile holder model](http://www.thingiverse.com/thing:139005)
 
 ### Skills ###
 + Programming Languages
@@ -103,12 +86,21 @@ Developed applications for both embedded and desktop platforms
     - Batch
     - Matlab
     - Makefile
-+ Markup Languages
+    - OpenSCAD 3D Modeling Language
++ Technologies
+    - SQLite
+    - ZigBee
++ Web Development
     - HTML
     - CSS
-+ OpenSCAD 3D Modeling Language
+    - CGI
+    - jQuery
+    - Bootstrap
+    - NodeJS
+    - Python
 + Platforms
-    - Embedded Linux
+    - Yocto Embedded Linux
+    - Timesys Factory Embedded Linux
     - WinCE
     - Android
     - Arduino
