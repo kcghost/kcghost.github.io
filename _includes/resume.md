@@ -4,8 +4,12 @@
 Eastern Time Zone, United States  
 
 ### Work Experience ###
-BSP Maintenance Lead  
-Novemeber 2019 - April 2021  
+**Freelance Software Engineer**  
+January 2022 - Present  
+Providing a wide variety of solutions and expertise to my clients  
+
+**BSP Maintenance Lead**  
+November 2019 - April 2021  
 Timesys Corporation  
 Managed a small team providing security solutions to customers  
 
@@ -22,7 +26,7 @@ Managed a small team providing security solutions to customers
     - Designed system to automatically rebase Linux forks onto latest mainline kernel
     - Integrated services with Gitlab
 
-Linux Engineer  
+**Linux Engineer**  
 July 2015 - October 2019  
 Timesys Corporation  
 Kernel and application development for embedded platforms  
@@ -42,7 +46,7 @@ Kernel and application development for embedded platforms
     - Designed UEFI secure boot and encrypted RFS (Root File System) mechanism in Yocto
     - Developed secure boot mechanisms for both x86 and ARM platforms.
 
-Embedded Systems Software Engineer  
+**Embedded Systems Software Engineer**  
 July 2012 - June 2015  
 Software Design Solutions  
 Developed applications for both embedded and desktop platforms  
