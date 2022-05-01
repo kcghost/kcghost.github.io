@@ -39,15 +39,13 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              {% for page_link in site.html_pages %}
-                {% if page.title == page_link.title %}
-                <li class="active">
-                {% else %}
-                <li>
-                {% endif %}
-                    <a href="{{ page_link.url }}">{{ page_link.title }}</a>
-                </li>
-              {% endfor %}
+              {% if page.title == 'Introduction' %}
+			  <li class="active">
+              {% else %}
+			  <li>
+			  {% endif %}
+			    <a href="/index.html">Introduction</a>
+			  </li>
 
               {% assign active_page_is_project = false %}
               {% for cat in page.categories %}
@@ -61,19 +59,33 @@
               {% else %}
               <li class="dropdown">   
               {% endif %}
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  {% for post_link in site.categories.projects %}
-                    {% if page.title == post_link.title %}
-                    <li class="active">
-                    {% else %}
-                    <li>
-                    {% endif %}
-                        <a href="{{ post_link.url }}">{{ post_link.title }}</a>
-                    </li>
-                  {% endfor %}
-                </ul>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <span class="caret"></span></a>
+	              <ul class="dropdown-menu" role="menu">
+	              {% for post_link in site.categories.projects %}
+	                {% if page.title == post_link.title %}
+	                <li class="active">
+	                {% else %}
+	                <li>
+	                {% endif %}
+	                    <a href="{{ post_link.url }}">{{ post_link.title }}</a>
+	                </li>
+	              {% endfor %}
+	              </ul>
               </li>
+			
+              {% for page_link in site.html_pages %}
+              	{% if page_link.title == 'Introduction' %}
+              		{% continue %}
+              	{% endif %}
+                {% if page.title == page_link.title %}
+                <li class="active">
+                {% else %}
+                <li>
+                {% endif %}
+                    <a href="{{ page_link.url }}">{{ page_link.title }}</a>
+                </li>
+              {% endfor %}
+              
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
