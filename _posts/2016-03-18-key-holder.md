@@ -3,6 +3,7 @@ title: DIY Key Holder
 layout: article
 category: projects
 description: Flat aluminum key holder meant to replace keychain
+updated: 2022-07-24
 ---
 ## DIY Key Holder ##
 I hate [keychains](https://www.google.com/search?tbm=isch&q=keychain). I hate finding the keys on them, their needless bulk, their weight, and their incessant jangling.
@@ -12,11 +13,23 @@ Out of all these interesting metal contraptions, I like the simple design of the
 
 I was disappointed to find, however, that as much as the [KeySmart](http://www.getkeysmart.com/) excels in the best design pattern (my opinion), it really sucks in implementation. At 20 dollars, the product is a tad overpriced to begin with. Then add on the fact of badly designed screws that loosen over time. Then add cheap, weak hardware that is prone to split upon tightening (I can personally testify). And for this broken product, the company offers no support whatsoever. I emailed them about my broken hardware, and they never responded. I found [several reviews](http://www.amazon.com/KeySmart-Compact-Key-Holder-Extended/dp/B010BMT0ES#customerReviews) complaining of the same. In sum, great idea, bad product, terrible company.
 
-So I made my own. Better, Cheaper, Stronger. I have been using it for over 6 months (this post is a little past due), with no problems whatsoever. Without further adue, I present to you my key holder.
+So I made my own. Better, Cheaper, Stronger. I have been using it for over 6 months (this post is a little past due), with ~~no problems whatsoever~~.
+
+**Edit**:
+Years later, I should tell you there is one big problem with this design.
+It doesn't work super well in the ignition of a car.
+When a car key is used the rest of the body falls downward, potentially with the opposite key sliding out, creating a long lever attached to the ignition key.
+If your knee bumps this lever you could accidentally shut off the car (**oof!**).
+I am *still using* this very same key holder, but I did need to solve this issue.
+I just flip the keyholder upward and keep it in place by draping the loop attachment over the turn signal switch.
+You may require a heavier loop attachment than just a USB flash drive; I currently have a small keychain swiss army knife on mine.
+
+Without further adue, I present to you my key holder.
 ![Key Holder Top](/assets/img/key_holder_top.jpg)
 [Top side](type=caption)
 ![Key Holder Bottom](/assets/img/key_holder_bottom.jpg)
 [Bottom side](type=caption)
+
 
 My build holds my house key, my car key, a knife, and a USB flash drive. It is about as light as it gets, the parts needed to hold these things together weigh less than a single one of the keys it holds. It fits in my pocket easily, makes no bloody noise, and is fun to play with (much to my wife's annoyance). The keys easily swing into operation; I can cut open packaging at any time; and I can quickly disconnect the USB drive and use it in any computer on the go.
 
