@@ -3,9 +3,9 @@ title: DIY Key Holder
 layout: article
 category: projects
 description: Flat aluminum key holder meant to replace keychain
-updated: 2022-07-24
+last_modified_at: 2022-07-24
 ---
-## DIY Key Holder ##
+## DIY Key Holder
 I hate [keychains](https://www.google.com/search?tbm=isch&q=keychain). I hate finding the keys on them, their needless bulk, their weight, and their incessant jangling.
 So I was really happy when I learned that alternatives exist. In fact, [there](https://www.keybar.us/) [are](https://huckberry.com/store/keydisk/category/p/17267-keydisk) [many](http://lifehacker.com/5828762/diy-swiss-army-style-folding-keychain-gives-you-more-room-in-your-pockets) [of](https://mykeyport.com/) [them](http://www.getkeysmart.com/). 
 
