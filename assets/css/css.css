@@ -29,6 +29,7 @@ a[href="type=caption"] {
 
 table {
 	margin: 15px;
+	margin-left: 0px;
 }
 
 table, th, td {

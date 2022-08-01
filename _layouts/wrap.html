@@ -119,11 +119,24 @@
 				</div><!--/.container-fluid -->
 			</nav>
 			<div class="content">
-				<b>
-					{{ page.date | date: '%Y-%m-%d' }}{% if page.updated %}, updated {{ page.updated | date: '%Y-%m-%d' }}
+				<div>
+					{% if page.date %}
+					<small>
+						<table>
+							<tr>
+								<th>Published</th>
+								<td>{{ page.date | date: '%Y-%m-%d' }}</td>
+							</tr>
+							{% if page.last_modified_at %}
+							<tr>
+								<th>Updated</th>
+								<td>{{ page.last_modified_at | date: '%Y-%m-%d' }}</td>
+							</tr>
+							{% endif %}
+						</table>
+					</small>
 					{% endif %}
-				</b>
-				<br></br>
+				</div>
 				{{ content }}
 			</div>
 		</div> <!-- /container -->
