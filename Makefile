@@ -4,7 +4,7 @@ build:
 	bundle exec jekyll build
 
 host:
-	bundle exec jekyll serve --host 0.0.0.0 --port 5000
+	bundle exec jekyll serve --host $(shell hostname) --port 5000
 
 clean:
 	bundle exec jekyll clean
