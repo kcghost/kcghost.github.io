@@ -124,6 +124,7 @@
 				</div><!--/.container-fluid -->
 			</nav>
 			<div class="content">
+				{{ content }}
 				<div>
 					{% if page.date %}
 					<small>
@@ -131,18 +132,15 @@
 							<tr>
 								<th>Published</th>
 								<td>{{ page.date | date: '%Y-%m-%d' }}</td>
-							</tr>
 							{% if page.last_modified_at %}
-							<tr>
 								<th>Updated</th>
 								<td>{{ page.last_modified_at | date: '%Y-%m-%d' }}</td>
-							</tr>
 							{% endif %}
+							</tr>
 						</table>
 					</small>
 					{% endif %}
 				</div>
-				{{ content }}
 			</div>
 		</div> <!-- /container -->
 		<!-- Bootstrap core JavaScript
