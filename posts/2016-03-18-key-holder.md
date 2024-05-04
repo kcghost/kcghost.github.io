@@ -1,11 +1,10 @@
 ---
 title: DIY Key Holder
-layout: article
 category: projects
 description: Flat aluminum key holder meant to replace keychain
-last_modified_at: 2022-07-24
+published: 2016-03-18
+updated: 2022-07-24
 ---
-## DIY Key Holder
 I hate [keychains](https://www.google.com/search?tbm=isch&q=keychain). I hate finding the keys on them, their needless bulk, their weight, and their incessant jangling.
 So I was really happy when I learned that alternatives exist. In fact, [there](https://www.keybar.us/) [are](https://huckberry.com/store/keydisk/category/p/17267-keydisk) [many](http://lifehacker.com/5828762/diy-swiss-army-style-folding-keychain-gives-you-more-room-in-your-pockets) [of](https://mykeyport.com/) [them](http://www.getkeysmart.com/). 
 
@@ -25,11 +24,10 @@ I just flip the keyholder upward and keep it in place by draping the loop attach
 You may require a heavier loop attachment than just a USB flash drive; I currently have a small keychain swiss army knife on mine.
 
 Without further adue, I present to you my key holder.
-![Key Holder Top](/assets/img/key_holder_top.jpg)
-[Top side](type=caption)
-![Key Holder Bottom](/assets/img/key_holder_bottom.jpg)
-[Bottom side](type=caption)
 
+![Top Side](/assets/img/key_holder_top.jpg)
+
+![Bottom Side](/assets/img/key_holder_bottom.jpg)
 
 My build holds my house key, my car key, a knife, and a USB flash drive. It is about as light as it gets, the parts needed to hold these things together weigh less than a single one of the keys it holds. It fits in my pocket easily, makes no bloody noise, and is fun to play with (much to my wife's annoyance). The keys easily swing into operation; I can cut open packaging at any time; and I can quickly disconnect the USB drive and use it in any computer on the go.
 

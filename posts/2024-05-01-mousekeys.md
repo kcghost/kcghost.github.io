@@ -1,11 +1,9 @@
 ---
 title: Who Killed My Mousekeys?
-layout: article
 category: blog
 description: Solving an annoying whodunnit
+published: 2024-05-05
 ---
-## Who killed my mousekeys?
-
 I have been using Linux on an old chromebook that's served me really well as a thin client/SSH machine.
 There are a lot of interesting problems to solve to make it as useful as possible, and just one of them is the touchpad.
 The touchpad is just really awful to use. Scrolling and moving the cursor is okay, but clicking and right-clicking is really difficult.

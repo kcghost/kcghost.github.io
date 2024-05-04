@@ -1,3 +1,6 @@
+---
+pagetitle: Resume
+---
 ## Casey Fitzpatrick ##
 [kcghost@gmail.com](mailto:kcghost@gmail.com)  
 [kcghost.github.io](http://kcghost.github.io/)  

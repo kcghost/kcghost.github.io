@@ -1,5 +1,0 @@
----
-title: Resume
-description: Casey Fitzpatrick's resume
----
-{% capture md_resume %}{% include resume.md %}{% endcapture %}{{ md_resume }}

@@ -1,10 +1,9 @@
 ---
 title: Dead Simple Media Server
-layout: article
 category: projects
 description: Media Server using Apache directory listing and html5
+published: 2016-06-13
 ---
-## Dead Simple Media Server ##
 So you've got a lot of movies and music and photos sitting on your hard drive. Uselessly. They are thrown around in great big piles, copied over from your last backup, which contains another backup, which contains a chain of copies leading back to the dawn of the last ice age. They have names like **[XvID]SUPER TROOPERS- RIP by Xtralaxxxx69_part1.AVI**. You don't remember where they are, what they are named, what quality, or even that you have them in your posession. You never view, watch, or listen to them. You have no idea how to play them on your phone, and less so regarding your TV. You would like a solution to these problems, a solution that lets you browse all your media at a moments notice from anywhere in your home.
 
 There are a few prominent solutions, like [Plex](https://plex.tv/) and [Subsonic](http://www.subsonic.org/pages/index.jsp) and [Universal Media Server](http://www.universalmediaserver.com/). But they are overcomplicated, they run on big runtimes (e.g. Java), they take up lots of resources, they are all *heavy*. Not ideal for a home server, unless you don't mind running a powerful PC 24/7. A better solution for a home server is an embedded ARM board (e.g. [Raspberry Pi](https://www.raspberrypi.org/)) that is quiet and takes up minimal power. Even better, run this server on a board that is also your router. But embedded boards can't handle *heavy*; you have to find something simple and *light*.

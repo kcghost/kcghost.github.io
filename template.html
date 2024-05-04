@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="generator" content="pandoc"/>
+$if(author)$
+<meta name="author" content="$author$"/>
+$endif$
+$if(description)$
+<meta name="description" content="$description$"/>
+$endif$
+$if(keywords)$
+<meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$"/>
+$endif$
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.11.2" />
+<title>$pagetitle$</title>
+
+</head>
+<body>
+
+<header>
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+$if(prev)$
+			<li><a href="$prev$">Previous</a></li>
+$endif$
+$if(next)$
+			<li><a href="$next$">Next</a></li>
+$endif$
+			<li><a href="about.html">About</a></li>
+			<li><a href="resume.html">Resume</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main>
+$if(title)$
+<h1>$title$</h1>
+$if(description)$
+<blockquote>$description$</blockquote>
+$endif$
+$endif$
+
+$body$
+
+<dl>
+$if(published)$
+	<dt>Published</dt>
+	<dd>$published$</dd>
+$endif$
+
+$if(updated)$
+	<dt>Updated</dt>
+	<dd>$updated$</dd>
+$endif$
+</dl>
+</main>
+
+<footer>
+Technical blog and personal website of <a href="about.html">Casey Fitzpatrick</a>
+</footer>
