@@ -49,12 +49,39 @@
 					<a href="/index.html">Introduction</a>
 				</li>
 
+							{% assign active_page_is_blog = false %}
+							{% for cat in page.categories %}
+								{% if active_page_is_blog == false and cat == "blog" %}
+									{% assign active_page_is_blog = true %}
+								{% endif %}
+							{% endfor %}
+
 							{% assign active_page_is_project = false %}
 							{% for cat in page.categories %}
 								{% if active_page_is_project == false and cat == "projects" %}
 									{% assign active_page_is_project = true %}
 								{% endif %}
 							{% endfor %}
+
+							{% if active_page_is_blog %}
+							<li class="active dropdown">
+							{% else %}
+							<li class="dropdown">
+							{% endif %}
+
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+								{% for post_link in site.categories.blog limit: 10 %}
+									{% if page.title == post_link.title %}
+									<li class="active">
+									{% else %}
+									<li>
+									{% endif %}
+											<a href="{{ post_link.url }}">{{ post_link.title }}</a>
+									</li>
+								{% endfor %}
+								</ul>
+							</li>
 
 							{% if active_page_is_project %}
 							<li class="active dropdown">
