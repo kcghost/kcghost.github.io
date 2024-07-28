@@ -1,3 +1,5 @@
 _site/*.html
+_site/*.txt
+_site/*.pdf
 index.md
 unpublished/

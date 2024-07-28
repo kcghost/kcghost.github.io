@@ -15,7 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: r-lib/actions/setup-pandoc@v2
+
+    - name: Install dependencies
+      run: | 
+        sudo apt-get update
+        sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-latex-extra pandoc 
     
     - name: Build Site
       run: make

@@ -14,13 +14,12 @@ reverse = $(if $(wordlist 2,2,$(1)),$(call reverse,$(wordlist 2,$(words $(1)),$(
 
 get_title = $(shell grep -iPo '(?<=^title: )(.*)' $1)
 
-GEN:=pandoc \
--s --template=template.html
+GEN:=pandoc -s --template=template.html
 
 PAGES:=$(foreach page,$(sort $(shell find pages -type f)),$(basename $(notdir $(page))))
 POSTS:=$(foreach post,$(sort $(shell find posts -type f)),$(basename $(notdir $(post))))
 
-all: _site/index.html $(foreach page,$(PAGES) $(POSTS),_site/$(page).html)
+all: _site/index.html $(foreach page,$(PAGES) $(POSTS),_site/$(page).html) _site/fitzpatrick_resume.txt _site/fitzpatrick_resume.pdf
 
 index.md: index_partial.md
 	cp $< $@
@@ -42,6 +41,13 @@ _site/%.html: posts/%.* template.html
 	$(if $(NEXT),-V next=$(NEXT).html -V next_title="$(NEXT_TITLE)") \
 	-V author="Casey Fitzpatrick"
 
+_site/fitzpatrick_resume.txt: pages/resume.md
+	pandoc $< --wrap=none --eol=crlf -t plain | \
+	sed -z 's/^\s*//; s/\s*$$//' >$@
+
+_site/fitzpatrick_resume.pdf: pages/resume.md
+	pandoc $< -o $@
+
 # Host a quick and dirty server to test the site
 host:
 	python3 -m http.server 5000 -d _site/
@@ -49,3 +55,5 @@ host:
 clean:
 	rm -f index.md
 	rm -f _site/*.html
+	rm -f _site/*.txt
+	rm -f _site/*.pdf

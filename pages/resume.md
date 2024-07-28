@@ -1,5 +1,7 @@
 ---
 pagetitle: Resume
+geometry: margin=0.5in
+is_resume: true
 ---
 ## Casey Fitzpatrick ##
 [kcghost@gmail.com](mailto:kcghost@gmail.com)  
