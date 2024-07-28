@@ -12,10 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Install
-      uses: pandoc/actions/setup@{main}
-      with:
-        version: 2.19
-    
+    - name: Install Pandoc
+      uses: pandoc/actions/setup@v1
+
     - name: Build Site
       run: make
