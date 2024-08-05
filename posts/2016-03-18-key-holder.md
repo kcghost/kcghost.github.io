@@ -31,7 +31,7 @@ Without further adue, I present to you my key holder.
 
 My build holds my house key, my car key, a knife, and a USB flash drive. It is about as light as it gets, the parts needed to hold these things together weigh less than a single one of the keys it holds. It fits in my pocket easily, makes no bloody noise, and is fun to play with (much to my wife's annoyance). The keys easily swing into operation; I can cut open packaging at any time; and I can quickly disconnect the USB drive and use it in any computer on the go.
 
-##### Parts List #####
+## Parts List
 
 You should be able to find these parts or decent equivalents in your local hardware store.
 There are different sizes of binding posts available, and even post extenions. 
@@ -43,7 +43,7 @@ Therefore modifications should be possible to support more keys, though it is im
 | Posts with Aluminum Screw 8-32 x 1/4     | Hillman 3826-D   | 2          |
 | Socket Head Set Screw 8-32 x 3/16        | Hillman 831-C    | 2          |
 
-##### Construction #####
+## Construction
 
 The basic build consists of one 3 1/2" plate, and one 3 7/8" plate, with 13/64" holes 3" apart.
 Just use two 3 1/2" plates if you decide against the loop piece.
@@ -65,6 +65,6 @@ I have yet to find a key knife that is perfectly flat, they all have rivets that
 
 Lastly, my build has a USB flash drive attached. I got a whole lot of [these detachable straps](http://www.ebay.com/itm/Plastic-Detachable-Lanyard-Wrist-Strap-Lariat-Handy-4-Phone-card-holder-key-ring-/190934909901?pt=LH_DefaultDomain_0&var=&hash=item2c749b83cd) (they are cheap) to attach the drive with. Most USB flash drives have a loop you can push the strap through, then push the detach end through the strap and pull taught (you can also do this multiple times to get it shorter).
 
-##### Conclusion #####
+## Conclusion
 
 Go forth, and build! Free yourself from the tyranny that is *keychain*!

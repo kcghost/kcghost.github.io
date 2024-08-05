@@ -10,7 +10,7 @@ There are a few prominent solutions, like [Plex](https://plex.tv/) and [Subsonic
 
 The solution I found is simply [Apache Web Server](https://httpd.apache.org/), which can run on almost anything and serve up your pictures, music, and video thanks to a bit of [HTML5 magic](http://www.w3schools.com/html/html5_video.asp). A [Chromecast](https://www.google.com/intl/en_us/chromecast/?utm_source=chromecast.com) can solve the difficulty of viewing on your TV. But creating this media server will also take some diligence organizing and converting your files. I'll break down how you can handle your files, set up Apache, and start watching. This is not a step-by-step tutorial however. I am only providing useful bits and pieces. I assume that you have the knowledge to put the pieces together as well as add your own.
 
-#### Video ####
+## Video
 
 I recommend putting all of your movies in one folder but each TV series into its own.
 
@@ -51,7 +51,7 @@ Save that as 'mp4ize', and bulk convert your media with:
 
 Run it overnight on large file sets.
 
-#### Audio ####
+## Audio
 
 I recommend putting all of your music into one big folder. This way, when you serve up the folder in an Apache directory listing, you can script up a media player that can use all of your music as a playlist, complete with 'shuffle' and other media controls. Batch convert any oddball formats to mp3 with:
 
@@ -61,11 +61,11 @@ Music can be identified, tagged, and renamed with the excellent [MusicBrainz Pic
 
 `$if2(%albumartist%,%artist%) - $if(%album%,%album% - %title%,%title%)`
 
-#### Photo ####
+## Photo
 
 I have not personally tried this yet, but [this](http://www.linuxjournal.com/content/tech-tip-automaticaly-organize-your-photos-date) seems like a great way to organize photos. You might also want to check out [fdupes](https://github.com/adrianlopezroche/fdupes) to get rid of duplicates, since photos tend to get hit worst by the 'hastily made backups' problem.
 
-#### Apache ####
+## Apache
 
 For a basic setup, you'll want to point Apache to your media folder (in my case mounted on an external USB drive), and allow the `Indexes` option. Now you can easily browse your files with a browser (on mobile or PC), and thanks to HTML5, you can play audio and video right in your browser. But by default, you can only play one file at a time, and it doesn't look pretty. That's where [Apaxy](http://adamwhitcroft.com/apaxy/) comes in. Apaxy makes directory listings beautiful and provides an excellent base for tweaking styles and adding functionality.
 
@@ -321,7 +321,7 @@ for (var i=0; i<anchors.length; i++){
 
 To make changes easily, as well as upload files to your server, I recommend setting up [NFS](http://www.tldp.org/HOWTO/NFS-HOWTO/server.html).
 
-##### 2GB Limit #####
+### 2GB Limit#
 
 A mysterious problem you may run into is that some files are missing. Specifically, files over 2GB do not show up in the listing and are not able to be served by Apache. Unless your Apache is really old, this is a problem that *only* affects cross-compiled Apache binaries, and stems from an issue with the build. The configure script for the [Apache Portable Runtime](https://apr.apache.org/) forces LFS (Large File Support) to be disabled when cross-compiling. You will have to rebuild Apache from source with the following hacky patch on APR:
 
@@ -352,11 +352,11 @@ index 449c884..5bf1a4c 100755
 
 Be aware that just because Apache has large file support, does not mean modules it interacts with do as well. I had to disable PHP in my case (not using it at the moment anyway) to stop Apache from crashing upon loading that module. The best way to debug Apache issues is to use `httpd -X` by the way.
 
-##### Large folders #####
+### Large folders#
 
 If you have any folders that take a long time to load, such as a Music folder with thousands of files in it, there is a hacky option to speed things up. Just `wget` the html *for* that folder *in* that folder. That will save an 'index.html' that Apache will serve up instead of trying to regenerate it on the fly. However, you will have to redo if you make changes to the folder, and you will lose sorting capability.
 
-#### Casting ####
+## Casting
 
 So now you can view all of your media on your phone or PC, but you want to watch movies on your TV. Get yourself a [Chromecast](https://www.google.com/intl/en_us/chromecast/?utm_source=chromecast.com). They can be a bit fiddly at times, but they are easy and cheap. It is also best if you have an Android phone with Chrome on it. Any HTML5 video you view in that browser comes with a cast button, and it works just as well for video on your home server as it does videos on the internet. Oddly, the desktop Chrome does not currently have such support built in to the Google Cast extension, you can only cast the tab (which will essentially provide a kind of VNC, and limit the resolution). The [CastBuddy](https://chrome.google.com/webstore/detail/castbuddy/ghagedffjalchgcgdgfindabkpnmalel?hl=en) extension can be used instead, though for some reason it doesn't actually detect videos on the page, you have to give it the URL manually.
 
@@ -366,6 +366,6 @@ Another useful tool to know about is [castnow](https://github.com/xat/castnow), 
 
 I considered digging into the messy details of how `castnow` works in order to create casting buttons on the web page (likely through the use of CGI), but I think I'm calling it done for now. If anyone happens to succeed in doing that, please let me know.
 
-#### Conclusion ####
+## Conclusion
 
 Enjoy the sweet taste of victory as you binge watch until your body becomes indiscernible from your couch.

@@ -11,8 +11,7 @@ The touchpad is just really awful to use. Scrolling and moving the cursor is oka
 So I was really glad to find I could use key combinations to emulate the mouse pointer buttons instead.
 (I originally found this method in a blog post specifically about a chromebook but I can't seem to find it anymore to link to it.)
 
-`~/.xmodmap`:
-```
+```{filename=~/.xmodmap}
 ! Remap "Search" Chromebook key (Left of 'a', where capslock would be) from Super to Mode_switch
 clear mod4
 clear mod5
@@ -29,9 +28,7 @@ keycode 114 = Right Right End End
 keycode 111 = Up Up Page_Up Page_Up
 keycode 116 = Down Down Page_Down Page_Down
 ```
-
-`~/.xinitrc`
-```
+```{filename=~/.xinitrc}
 [ -f ~/.Xmodmap ] && xmodmap ~/.Xmodmap
 
 # Enable mousekeys so xmodmap bindings can use them
@@ -53,12 +50,13 @@ When I first encountered this I looked online and found [this answer on stackexc
 
 That mostly solves the issue, but I noticed recently I was still losing my mousekeys randomly.
 Re-running `xkbset m` always solves the issue for a time.
-```
-xkbset q exp | grep Mouse
+```{=html}
+<pre><samp>$ <kbd>xkbset q exp | grep Mouse</kbd>
 	Upon Expiry Mouse-Keys will be: Unchanged
 	Upon Expiry Mouse-Keys Acceleration will be: Unchanged
-xkbset q | grep "Mouse-Keys ="
+$ <kbd>xkbset q | grep "Mouse-Keys ="</kbd>
 	Mouse-Keys = Off
+</samp></pre>
 ```
 What is going on? It's not expiring, it's just losing the mousekeys setting seemingly out of nowhere.
 
@@ -67,7 +65,7 @@ But goddamnit I need to know. What the hell is killing my mousekeys?
 
 It was difficult to associate exactly what I was doing when this happens; I needed a quicker feedback loop.
 I use a shell script to handle the [status bar of my dwm desktop](https://dwm.suckless.org/status_monitor/), so I just put this in there:
-```
+```{filename=~/bin/statusbar}
 while true; do
 	if xkbset q | grep "Mouse-Keys = Off"; then
 		s="WTF!"
@@ -85,16 +83,17 @@ As it turns out just `qemu-system-x86_64 -nographic`(in a remote session!) is en
 
 Some output of QEMU in my SSH session is being interpreted by my `xterm` terminal in such a way that it kills my mousekeys. Which feels deeply upsetting, that something can reach beyond the borders of both SSH and terminal and affect my desktop experience.
 This smells like [ANSI escape code](https://en.wikipedia.org/wiki/ANSI_escape_code) insanity, lets narrow it down:
-```
-qemu-system-x86_64 -nographic >t
-	Ctrl-A X
-cat t  # kills mousekeys
-head t # still a murderer
-xxd t
-	00000000: 1b63 1b5b 3f37 6c1b 5b32 4a1b 5b30 6d53  .c.[?7l.[2J.[0mS
-head -c 2 t # Turns out just the first two bytes are necessary to kill
-head -c 2 t >kill_mousekeys
-cat kill_mousekeys # does what it says on the tin
+```{=html}
+<pre><samp>$ <kbd>qemu-system-x86_64 -nographic >t</kbd>
+<kbd>Ctrl-A X</kbd>
+$ <kbd>cat t</kbd>  # kills mousekeys
+$ <kbd>head t</kbd> # still a murderer
+$ <kbd>xxd t</kbd>
+00000000: 1b63 1b5b 3f37 6c1b 5b32 4a1b 5b30 6d53  .c.[?7l.[2J.[0mS
+$ <kbd>head -c 2 t</kbd> # Turns out just the first two bytes are necessary to kill
+$ <kbd>head -c 2 t >kill_mousekeys</kbd>
+$ <kbd>cat kill_mousekeys</kbd> # does what it says on the tin
+</samp></pre>
 ```
 The sequence `1b63` is killing my mousekeys.
 `1b` is the normal escape code character, often referred to as `ESC` when describing escape control codes.
@@ -120,6 +119,7 @@ I ended up just putting in early `return`s at different spots, building, and tes
 I finally traced it down to a call to `xtermClearLEDs` in `scrollbar.c`.
 `xtermClearLEDs` is also called in two other places, all #ifdef guarded by `OPT_SCROLL_LOCK`.
 The problem is twofold:
+
 1. The default xterm "reset" behavior includes resetting NumLock, CapsLock, and ScrollLock. i.e. The LEDs on your typical keyboard.
 2. The function for clearing those LEDs takes a nuclear approach and ends up wiping all Keyboard Controls, including mousekeys. I guess mouse keys is effectually a kind of Lock or LED?
 
@@ -151,12 +151,13 @@ But `xterm` is messing with the Lock states of the whole X session,
 including other instances of `xterm`, browsers, calculators, whatever.
 
 So there is *definiteley* a bug in `xtermClearLEDs`.
+
 1. It probably shouldn't be clearing beyond the standard three locks.
 2. I don't think it has any business clearing these locks at all!
 Not unless it could manage its own "LEDs" indepedent of all other applications.
 
 The best fix then is to neuter `xtermClearLEDs`:
-```
+```{filename=scrollbar.c}
 void
 xtermClearLEDs(TScreen *screen)
 {
@@ -180,4 +181,4 @@ You could also choose to disable the entire `OPT_SCROLL_LOCK` feature, though we
 
 Who killed my mousekeys?
 It was `xterm`, in the scrollbar code, with overbroad interpretation of decades-old escape sequences!
-It's a clever murder weapon, I wouldn't be surprised if there is a dangerous-as-hell CVE or two lurking in those waters.
+It's a clever murder weapon. I wouldn't be surprised if there is a dangerous-as-hell CVE or two lurking in those waters.
