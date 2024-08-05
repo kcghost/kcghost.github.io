@@ -3,7 +3,6 @@
 # Use sed to "extend" Markdown syntax
 # The right way to do this would be lua-extend pandoc or use xmlstarlet, but I don't feel like losing my mind
 set -euo pipefail
-set -x
 
 pdoc() {
 	pandoc -s --template=template.html "${@}"
