@@ -16,7 +16,27 @@ $if(keywords)$
 $endif$
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.11.2">
 <title>$pagetitle$</title>
-
+<style>
+	hgroup > h1, hgroup > h2, hgroup > h3,
+	hgroup > h4, hgroup > h5, hgroup > h6 {
+		margin-bottom: 0;
+	}
+	hgroup > p {
+		margin-top: 0;
+		text-indent: 1rem;
+	}
+	main > nav, main > nav > ul, main > nav > ul > li,
+	main > nav > ul > li > ul, main > nav > ul > li > ul > li {
+		all: revert;
+		margin-top: 0;
+	}
+	main > nav li>:not(ul,:only-child)::after {
+		content: '';
+	}
+	main > nav > h3 {
+		margin: 0;
+	}
+</style>
 </head>
 <body>
 
@@ -43,10 +63,19 @@ $endif$
 
 <main>
 $if(title)$
+<hgroup>
 <h1>$title$</h1>
 $if(description)$
-<blockquote>$description$</blockquote>
+<p>$description$</p>
 $endif$
+</hgroup>
+$endif$
+
+$if(toc)$
+<nav>
+<h3>Contents</h3>
+$table-of-contents$
+</nav>
 $endif$
 
 $body$
