@@ -12,6 +12,10 @@ next = $(word $(call pos,$1,$2),$(filter-out $1,$2))
 # https://stackoverflow.com/a/14260762
 reverse = $(if $(wordlist 2,2,$(1)),$(call reverse,$(wordlist 2,$(words $(1)),$(1))) $(firstword $(1)),$(1))
 
+# https://www.contensis.com/help-and-docs/guides/authoring-and-managing-content/canvas-editor/markdown-shortcuts
+# TODO: Use sed to hack in support for `::`
+# TODO: Use sed to hack in support for <samp> as opposed to code blocks (preformatted after pandoc)
+
 get_title = $(shell grep -iPo '(?<=^title: )(.*)' $1)
 
 GEN:=pandoc -s --template=template.html
@@ -36,9 +40,10 @@ _site/%.html: posts/%.* template.html
 	$(eval PREV_TITLE:=$(if $(PREV),$(call get_title,posts/$(PREV).md),))
 	$(eval NEXT:=$(strip $(call next,$(basename $(notdir $@)),$(POSTS))))
 	$(eval NEXT_TITLE:=$(if $(NEXT),$(call get_title,posts/$(NEXT).md),))
-	$(GEN) $< -o $@ \
+	./md2html.sh $< $@ \
 	$(if $(PREV),-V prev=$(PREV).html -V prev_title="$(PREV_TITLE)") \
 	$(if $(NEXT),-V next=$(NEXT).html -V next_title="$(NEXT_TITLE)") \
+	--toc \
 	-V author="Casey Fitzpatrick"
 
 _site/fitzpatrick_resume.txt: pages/resume.md
