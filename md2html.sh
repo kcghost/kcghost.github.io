@@ -5,7 +5,7 @@
 set -euo pipefail
 
 pdoc() {
-	pandoc -s --template=template.html "${@}"
+	pandoc -s --template=template.html --from markdown "${@}"
 }
 
 # postprocess codeblock with filename= attribute to include
@@ -44,16 +44,36 @@ var_shortcut() {
 	sed -E 's|%([^%]*)%|<var>\1</var>|g'
 }
 
+insert_toc() {
+	sed -E "s|\{table-of-contents\}|<nav>${toc//$'\n'/\\n}</nav>|g"
+}
+
+# Pandoc supports creating a figcaption using the alt text:
+# https://pandoc.org/MANUAL.html#extension-implicit_figures
+# But alt and figcaption are [two different things](https://thoughtbot.com/blog/alt-vs-figcaption)
+# Preprocess the following instead:
+# ![alt_text](path/to/image.jpg "title_text" "caption_text")
+figure_caption() {
+	sed -E 's|!\[([^]]*)\]\(([^ ]*) \"([^"]*)\" \"([^"]*)\"\)|'\
+'<figure><img alt="\1" src="\2" title="\3"><figcaption>\4</figcaption></figure>|g'
+}
+
 input="${1}"
 output="${2}"
 shift
 shift
 
+# first grab the toc contents to insert
+echo "\$table-of-contents\$" >/tmp/toc.html
+toc=$(pandoc -s --toc --template=/tmp/toc.html "${input}")
+
 # treating kbd_shortcut as postprocess is super kludgey
 # but I want it available for samp blocks that will be HTML-escaped
 cat "${input}" | \
 var_shortcut | \
+figure_caption | \
 pdoc "${@}" | \
 filename_to_var | \
 samp_block | \
+insert_toc | \
 kbd_shortcut >"${output}"
