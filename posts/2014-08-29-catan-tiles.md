@@ -11,7 +11,7 @@ For those not familiar, [Catan](http://www.catan.com/) is a board game that cons
 I liked the modular approach, since if you had enough of them, you can create any size board you wish to play on. Unfortunately, the production for Hexels only seems to have lasted as long as its [Kickstarter](https://www.kickstarter.com/projects/1330163305/hexels-the-completely-modular-settlers-of-catan-ga). I decided instead to print out tile holders on my 3D printer. There are a few designs on Thingiverse that expanded upon Tim Walsh's idea for Hexels, but I thought I could come up with a more functional design.
 
 Many caliper measurements, calculations, frustrations, and prototypes later, this was the result:
-![Hex tiles](/assets/img/hex_tiles.jpg)
+![Hex tile holders with hex tile, city, settlement, ship, and road held in place.](/assets/img/hex_tiles.jpg)
 
 My design offers the following features:
 

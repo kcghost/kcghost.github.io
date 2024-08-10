@@ -25,9 +25,9 @@ You may require a heavier loop attachment than just a USB flash drive; I current
 
 Without further adue, I present to you my key holder.
 
-![Top Side](/assets/img/key_holder_top.jpg)
+![Key holder with two keys and a key knife swung out. USB flash drive attached. Edges of the keys are blacked out.](/assets/img/key_holder_top.jpg "You can totally copy a key from an image, so yeah" "Top Side")
 
-![Bottom Side](/assets/img/key_holder_bottom.jpg)
+![Key holder with two keys and a key knife swung into compact position. USB flash drive detached, its connection piece in frame.](/assets/img/key_holder_bottom.jpg "" "Bottom Side")
 
 My build holds my house key, my car key, a knife, and a USB flash drive. It is about as light as it gets, the parts needed to hold these things together weigh less than a single one of the keys it holds. It fits in my pocket easily, makes no bloody noise, and is fun to play with (much to my wife's annoyance). The keys easily swing into operation; I can cut open packaging at any time; and I can quickly disconnect the USB drive and use it in any computer on the go.
 
