@@ -70,7 +70,6 @@ toc=$(pandoc -s --toc --template=/tmp/toc.html "${input}")
 # treating kbd_shortcut as postprocess is super kludgey
 # but I want it available for samp blocks that will be HTML-escaped
 cat "${input}" | \
-var_shortcut | \
 figure_caption | \
 pdoc "${@}" | \
 filename_to_var | \
