@@ -54,8 +54,13 @@ insert_toc() {
 # Preprocess the following instead:
 # ![alt_text](path/to/image.jpg "title_text" "caption_text")
 figure_caption() {
-	sed -E 's|!\[([^]]*)\]\(([^ ]*) \"([^"]*)\" \"([^"]*)\"\)|'\
-'<figure><img alt="\1" src="\2" title="\3"><figcaption>\4</figcaption></figure>|g'
+	sed -E 's|!\[([^]]*)\]\(([^.]*)\.(jpg\|png) \"([^"]*)\" \"([^"]*)\"\)|'\
+'<figure><img alt="\1" src="\2.\3" title="\4"><figcaption>\5</figcaption></figure>|g'
+}
+
+figure_caption_video() {
+	sed -E 's|!\[([^]]*)\]\(([^.]*)\.(mp4\|webm) \"([^"]*)\" \"([^"]*)\"\)|'\
+'<figure><video loop autoplay muted title="\4"><source src="\2.\3"/><p>Your browser does not support embedded video.</p><p>\1</p></video><figcaption>\5</figcaption></figure>|g'
 }
 
 input="${1}"
@@ -71,6 +76,7 @@ toc=$(pandoc -s --toc --template=/tmp/toc.html "${input}")
 # but I want it available for samp blocks that will be HTML-escaped
 cat "${input}" | \
 figure_caption | \
+figure_caption_video | \
 pdoc "${@}" | \
 filename_to_var | \
 samp_block | \
