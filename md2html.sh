@@ -33,10 +33,11 @@ samp_block() {
 }
 
 # Process '[[foobar]]' as <kbd>foobar</kbd>
+# Only operate *outside* of <code> blocks
 # Similar to https://github.com/RickTalken/kbdextension
 # Separate begin/end is necessary for [nesting](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd#representing_keystrokes_within_an_input)
 kbd_shortcut() {
-	sed -E 's|\[\[|<kbd>|g;s|\]\]|</kbd>|g' 
+	sed -E '/^<code>/,/<\/code>/!s|\[\[|<kbd>|g;/^<code>/,/<\/code>/!s|\]\]|</kbd>|g'
 }
 
 # Process '%foobar%' as <var>foobar</var>
