@@ -37,7 +37,11 @@ samp_block() {
 # Similar to https://github.com/RickTalken/kbdextension
 # Separate begin/end is necessary for [nesting](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd#representing_keystrokes_within_an_input)
 kbd_shortcut() {
-	sed -E '/^<code>/,/<\/code>/!s|\[\[|<kbd>|g;/^<code>/,/<\/code>/!s|\]\]|</kbd>|g'
+	# sed range doesn't look for a termination on the same line it just found a start match on.
+	# so start by removing "single line code" so it doesn't mess with the ranges, then replace them back to normal
+	sed -r 's/<code>(.*)<\/code>/<single_line_code>\1<\/single_line_code>/' |
+	sed -E '/^<code>/,/<\/code>/!s|\[\[|<kbd>|g;/^<code>/,/<\/code>/!s|\]\]|</kbd>|g' |
+	sed -r 's/<single_line_code>(.*)<\/single_line_code>/<code>\1<\/code>/'
 }
 
 # Process '%foobar%' as <var>foobar</var>
