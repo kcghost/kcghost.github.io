@@ -11,7 +11,13 @@ Eastern Time Zone, United States
 ### Work Experience ###
 **Freelance Software Engineer**  
 January 2022 - Present  
-Providing a wide variety of solutions and expertise to my clients  
+Providing a wide variety of solutions and expertise to my clients
+
++ [Keyo](https://keyo.com/)
++ [Juke Audio](https://www.jukeaudio.com/)
++ [PDSVISION](https://pdsvision.com/)
++ [QDS](https://qd5.com/en-us/our-team/)
+
 
 **BSP Maintenance Lead**  
 November 2019 - April 2021  
