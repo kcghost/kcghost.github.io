@@ -409,7 +409,7 @@ Keyboards like the [Logitech K400](https://www.logitech.com/en-us/products/keybo
 ssh -Y couch@desktop x2x -west -to :1.0
 ```
 
-[x2x](https://linux.die.net/man/1/x2x) is a very old tool that has the effect of adding a remote monitor monitor to the Chromebook. It's as if I plugged the TV into HDMI and set the TV to the left of Primary. I can start up `couch_control` and move my cursor left onto the TV screen. I can type normally, fix up whatever, then bring the cursor back and [[[[Ctrl]]+[[C]]]].
+[x2x](https://linux.die.net/man/1/x2x) is a very old tool that has the effect of adding a remote monitor to the Chromebook. It's as if I plugged the TV into HDMI and set the TV to the left of Primary. I can start up `couch_control` and move my cursor left onto the TV screen. I can type normally, fix up whatever, then bring the cursor back and [[[[Ctrl]]+[[C]]]].
 
 ## Hacking in USB-C PD
 This Chromebook needs 12V power in from a barrel jack. It's inconvenient to lug around its bespoke power adapter, and times have (finally) changed. Ish.
