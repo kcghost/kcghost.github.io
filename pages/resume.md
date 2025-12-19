@@ -13,11 +13,11 @@ Eastern Time Zone, United States
 January 2022 - Present  
 Providing a wide variety of solutions and expertise to my clients
 
-+ [Keyo](https://keyo.com/)
-+ [Juke Audio](https://www.jukeaudio.com/)
-+ [PDSVISION](https://pdsvision.com/)
-+ [QDS](https://qd5.com/en-us/our-team/)
-
++ Developed and maintained embedded firmware for a biometric palm scanner platform
++ Integrated Chromium Widevine support into Yocto
++ Built a custom high performance SPOE(Stream Processing Offload Engine) for use with HAProxy
++ Developed custom changes for the WireGuard implementation in the Linux kernel
++ Other projects and details under NDA
 
 **BSP Maintenance Lead**  
 November 2019 - April 2021  
@@ -87,20 +87,21 @@ Developed applications for both embedded and desktop platforms
 
 ### Skills ###
 + Programming Languages
-    - Assembly
     - C
     - C++
+    - Assembly
     - C#
     - Java
 + Scripting Languages
     - Python
+    - Posix shell
+    - Bash
+    - Makefile
     - Javascript
     - PHP
     - AWK
-    - Bash
     - Batch
     - Matlab
-    - Makefile
     - OpenSCAD 3D Modeling Language
 + Technologies
     - SQLite
@@ -114,6 +115,8 @@ Developed applications for both embedded and desktop platforms
     - NodeJS
     - Python
 + Platforms
+    - Buildroot
+    - Pi-gen
     - Yocto Embedded Linux
     - Timesys Factory Embedded Linux
     - WinCE
@@ -127,8 +130,8 @@ Developed applications for both embedded and desktop platforms
     - Eclipse SWT
     - Embarcadero VCL
 + Version Control Systems
-    - SVN
-    - GIT
+    - Git
+    - Svn
 + Electrical Engineering
 + Soldering
 + 3D Printing
